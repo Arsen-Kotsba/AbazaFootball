@@ -11,9 +11,9 @@ def create_app():
     db.init_app(app)
 
     # Регистрация маршрутов
-    from app.views.admin_routes import admin_bp
-    from app.views.user_routes import user_bp
-    from app.views.auth_routes import auth_bp
+    from championship_app.views.admin_routes import admin_bp
+    from championship_app.views.user_routes import user_bp
+    from championship_app.views.auth_routes import auth_bp
 
     app.register_blueprint(admin_bp, url_prefix='/admin')
     app.register_blueprint(user_bp, url_prefix='/')
